@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jHt-cr-In3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="segue_bag_lama___veri_aktarımı" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="yazınız" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5b-Re-lnu">
+                                <rect key="frame" x="159" y="234" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrV-VX-J2Z">
+                                <rect key="frame" x="163" y="348" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="28h-9n-AgD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KONTROL"/>
+                                <connections>
+                                    <action selector="KontrolEt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evW-zJ-ikr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GÖRMEK İSTEDİĞİNİZ ŞEYİ AŞAGIYA YAZINIZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-6h-Opy">
+                                <rect key="frame" x="45" y="173" width="349" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z5b-Re-lnu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="3wo-VS-1PW"/>
+                            <constraint firstItem="mrV-VX-J2Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="46m-lX-hhu"/>
+                            <constraint firstItem="mrV-VX-J2Z" firstAttribute="top" secondItem="Z5b-Re-lnu" secondAttribute="bottom" constant="80" id="80H-Id-pzJ"/>
+                            <constraint firstItem="d1n-6h-Opy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KS1-2L-U5x"/>
+                            <constraint firstItem="Z5b-Re-lnu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PdQ-dD-gue"/>
+                            <constraint firstItem="Z5b-Re-lnu" firstAttribute="top" secondItem="d1n-6h-Opy" secondAttribute="bottom" constant="84" id="cvL-q3-8OW"/>
+                            <constraint firstItem="d1n-6h-Opy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="hqJ-Hr-Jk5"/>
+                            <constraint firstItem="Z5b-Re-lnu" firstAttribute="centerX" secondItem="mrV-VX-J2Z" secondAttribute="centerX" id="xW9-nb-npS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RB1-fB-8tp"/>
+                    <connections>
+                        <outlet property="AlınanTextField" destination="Z5b-Re-lnu" id="DSN-RJ-Pk8"/>
+                        <outlet property="Label" destination="d1n-6h-Opy" id="r9b-nB-nXW"/>
+                        <segue destination="vNc-Wm-9bI" kind="show" identifier="toVCto" id="KLT-ys-IcV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923.1884057971015" y="93.75"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Z9c-qF-FSr">
+            <objects>
+                <viewController id="vNc-Wm-9bI" customClass="SecondViewController" customModule="segue_bag_lama___veri_aktarımı" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6uV-XB-Vd9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GÖSTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBr-yt-kxN">
+                                <rect key="frame" x="186" y="238" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zdi-rs-A6h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zdi-rs-A6h" firstAttribute="bottom" secondItem="xBr-yt-kxN" secondAttribute="bottom" constant="549" id="IZl-BY-r7J"/>
+                            <constraint firstItem="xBr-yt-kxN" firstAttribute="top" secondItem="Zdi-rs-A6h" secondAttribute="top" constant="238" id="SiM-SA-KEN"/>
+                            <constraint firstItem="xBr-yt-kxN" firstAttribute="leading" secondItem="Zdi-rs-A6h" secondAttribute="leading" constant="186" id="Ton-bA-uHe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ctY-OU-S0N"/>
+                    <connections>
+                        <outlet property="GözükenLabel" destination="xBr-yt-kxN" id="PgL-dR-yRV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zh8-gI-7q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942.0289855072465" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1mV-Rr-KMA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jHt-cr-In3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="em8-qu-VTW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hb9-Le-O4Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmH-dZ-TIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
